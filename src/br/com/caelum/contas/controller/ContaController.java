@@ -11,7 +11,7 @@ public class ContaController {
 
 	@RequestMapping("/form")
 	public String formulario() {
-		return "formulario";
+		return "conta/formulario";
 	}
 
 	@RequestMapping("/adicionaConta")
@@ -19,6 +19,6 @@ public class ContaController {
 		System.out.println("Conta:" + conta.getDescricao() + " adicionada");
 		ContaDAO dao = new ContaDAO();
 		dao.adiciona(conta);
-		return "conta_adicionada";
+		return "conta/conta_adicionada";
 	}
 }
